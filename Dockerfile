@@ -1,4 +1,22 @@
-# Use Node.js 20 slim version
+# Test stage
+FROM node:20-slim AS test
+
+# Set the working directory
+WORKDIR /usr/src/app
+
+# Copy package.json and package-lock.json
+COPY package*.json ./
+
+# Install all dependencies, including test dependencies
+RUN npm install
+
+# Copy the entire project
+COPY . .
+
+# Run tests
+CMD ["npm", "test"]
+
+# Development stage
 FROM node:20-slim
 
 # Set the working directory
