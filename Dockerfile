@@ -2,7 +2,7 @@
 FROM node:20-slim AS test
 
 # Set the working directory
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # Copy package.json and package-lock.json
 COPY package*.json ./
@@ -20,7 +20,7 @@ CMD ["npm", "test"]
 FROM node:20-slim
 
 # Set the working directory
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # Copy package.json and package-lock.json
 COPY package*.json ./
