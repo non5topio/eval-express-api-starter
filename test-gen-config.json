@@ -14,10 +14,10 @@
       "source-test-file-paths": [
         {
           "source-file-path": "src/app.js",
-          "test-file-path": "test/app.test.js"
+          "test-file-path": "test/app.test.js",
+          "test-command": "npm run coverage"
         }
       ],
-      "test-command": "npm run coverage",
       "coverage-type": "lcov",
       "code-coverage-report-path": "coverage/lcov.info",
       "desired-coverage": 100,
